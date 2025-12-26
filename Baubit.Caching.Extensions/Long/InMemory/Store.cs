@@ -33,7 +33,7 @@ namespace Baubit.Caching.Extensions.Long.InMemory
         /// <param name="loggerFactory">Factory for creating loggers.</param>
         public Store(long? minCap,
                      long? maxCap,
-                     ILoggerFactory loggerFactory) : base(minCap, maxCap, loggerFactory)
+                     ILoggerFactory loggerFactory) : base(minCap, maxCap, GenerateNextId, loggerFactory)
         {
             logger = loggerFactory.CreateLogger<Store<TValue>>();
         }
@@ -58,7 +58,7 @@ namespace Baubit.Caching.Extensions.Long.InMemory
         /// This method produces monotonically increasing identifiers starting from 1.
         /// Each call increments the previous ID by 1 to maintain sequential ordering.
         /// </remarks>
-        protected override long? GenerateNextId(long? lastGeneratedId)
+        private static long? GenerateNextId(long? lastGeneratedId)
         {
             return lastGeneratedId.HasValue ? lastGeneratedId.Value + 1 : 1;
         }
