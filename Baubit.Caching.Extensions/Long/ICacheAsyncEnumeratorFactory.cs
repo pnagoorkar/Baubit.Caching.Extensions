@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Baubit.Caching.Extensions.Long
+﻿namespace Baubit.Caching.Extensions.Long
 {
     public interface ICacheAsyncEnumeratorFactory<TValue> : ICacheAsyncEnumeratorFactory<long, TValue>
     {
