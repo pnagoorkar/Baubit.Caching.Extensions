@@ -15,8 +15,8 @@
     <SignAssembly>$(SignAssembly)</SignAssembly>
     <AssemblyOriginatorKeyFile>$(KeyFilePath)</AssemblyOriginatorKeyFile>
     <EmitCompilerGeneratedFiles>false</EmitCompilerGeneratedFiles>
-    <Description>TBD</Description>
-    <PackageTags>TBD</PackageTags>
+    <Description>Compatibility extension for Baubit.Caching. Provides caching primitives for caching with Guid (V7) or long keys.</Description>
+    <PackageTags>cache;ordered-cache;async-enumeration;event-sourcing;audit-log;time-series;guidv7;producer-consumer;two-tier-cache;fifo;insertion-order;thread-safe;message-queue;change-data-capture;baubit</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
