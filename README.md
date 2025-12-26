@@ -106,12 +106,12 @@ var cache = new OrderedCache<string>(config, l1Store, l2Store, metadata, loggerF
 ### ID Generation
 
 #### Guid7 (GuidV7)
-- **Auto-generated**: Pass `IIdentityGenerator` (e.g., `GuidV7Generator`) to `Store` constructor
+- **Auto-generated**: Pass `IIdentityGenerator` to `Store` constructor
 - **Time-ordered**: IDs naturally sort chronologically
 - **Globally unique**: Safe for distributed systems
 
 ```csharp
-var generator = GuidV7Generator.CreateNew();
+var generator = IdentityGenerator.CreateNew();
 var store = new Store<string>(generator, loggerFactory);
 ```
 
