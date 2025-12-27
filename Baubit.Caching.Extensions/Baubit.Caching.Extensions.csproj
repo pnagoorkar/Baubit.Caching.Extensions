@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Baubit.Caching" Version="2025.52.6-prerelease" />
+    <PackageReference Include="Baubit.Caching" Version="2025.52.7-prerelease" />
   </ItemGroup>
 
 </Project>
