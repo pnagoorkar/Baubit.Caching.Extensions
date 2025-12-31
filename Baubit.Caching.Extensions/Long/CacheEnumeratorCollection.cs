@@ -1,0 +1,14 @@
+﻿namespace Baubit.Caching.Extensions.Long
+{
+    /// <summary>
+    /// Collection of cache enumerators for managing multiple concurrent consumers of cached entries with long identifiers.
+    /// This type provides backward compatibility by specializing <see cref="CacheEnumeratorCollection{TId}"/> with long as the identifier type.
+    /// </summary>
+    /// <remarks>
+    /// This class is thread-safe and designed to track multiple enumerators reading from the same cache concurrently.
+    /// It enables automatic eviction of entries that all enumerators have passed, preventing memory leaks in multi-consumer scenarios.
+    /// </remarks>
+    public class CacheEnumeratorCollection : CacheEnumeratorCollection<long>
+    {
+    }
+}

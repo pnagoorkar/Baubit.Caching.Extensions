@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <AssemblyVersion>$(AssemblyVersion)</AssemblyVersion>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <Deterministic>true</Deterministic>
+    <RepositoryUrl>https://github.com/pnagoorkar/Baubit.Caching.Extensions</RepositoryUrl>
+    <Authors>Prashant Nagoorkar</Authors>
+    <SignAssembly>$(SignAssembly)</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(KeyFilePath)</AssemblyOriginatorKeyFile>
+    <EmitCompilerGeneratedFiles>false</EmitCompilerGeneratedFiles>
+    <Description>Compatibility extension for Baubit.Caching. Provides caching primitives for caching with Guid (V7) or long keys.</Description>
+    <PackageTags>cache;ordered-cache;async-enumeration;event-sourcing;audit-log;time-series;guidv7;producer-consumer;two-tier-cache;fifo;insertion-order;thread-safe;message-queue;change-data-capture;baubit</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="." />
+    <None Include="../LICENSE" Pack="true" PackagePath="." />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Baubit.Caching" Version="2026.1.1" />
+  </ItemGroup>
+
+</Project>
